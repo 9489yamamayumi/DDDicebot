@@ -22,5 +22,10 @@ async def ping(ctx):
 async def echo(ctx,arg):
     await ctx.send(arg)
 
+
+@bot.command()
+async def r(ctx,arg):
+    await ctx.send(arg.split('d'))
+
     
 bot.run(token)
