@@ -36,7 +36,7 @@ async def r(ctx,arg):
         dsum+=result[i]
     }
     '''
-    results=random.randint(1,int(vals[1])+1,int(vals[0]))
+    results=random.randint(1,int(vals[1]+1),int(vals[0]))
     await ctx.send(results)
     
     
