@@ -28,6 +28,7 @@ async def echo(ctx,arg):
 async def r(ctx,arg):
     random.seed()
     vals=arg.split('d')
+    print(vals)
     '''
     result=[]
     dsum=0
