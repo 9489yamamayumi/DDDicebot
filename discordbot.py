@@ -22,7 +22,7 @@ async def ping(ctx):
 async def echo(ctx,arg):
     await ctx.send(arg)
 
-
+'''
 @bot.command()
 async def r(ctx,arg):
     random.seed()
@@ -34,6 +34,6 @@ async def r(ctx,arg):
         dsum+=result[i]
     }
     await ctx.send(f"{arg} >> {dsum} {result}")
-
+'''
     
 bot.run(token)
