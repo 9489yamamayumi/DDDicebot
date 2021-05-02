@@ -36,7 +36,7 @@ async def r(ctx,arg):
         dsum+=result[i]
     }
     '''
-    await ctx.send(random.randint(1,vals[1]))
+    await ctx.send(str(random.randint(1,vals[1])))
     
     
 bot.run(token)
