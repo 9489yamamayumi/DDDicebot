@@ -31,10 +31,12 @@ async def r(ctx,arg):
     times=int(vals[0])
     sides=int(vals[1])
     results=[]
-    for i in range(2):{
+    rsltsum=0
+    for i in range(times):{
         results.append(random.randint(1,sides))
+        rsltsum+=results[i]
     }
-    await ctx.send(f"{arg} : {results}")
+    await ctx.send(f"{arg} >> {rsltsum} : {results}")
     '''
     result=[]
     dsum=0
