@@ -30,7 +30,7 @@ async def r(ctx,arg):
     vals=arg.split('d')
     times=int(vals[0])
     sides=int(vals[1])
-    await ctx.send(f"{arg} : {random.randint(1,7)}")
+    await ctx.send(f"{arg} : {random.randint(1,sides)}")
     '''
     result=[]
     dsum=0
