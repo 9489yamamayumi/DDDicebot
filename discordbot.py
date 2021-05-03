@@ -28,6 +28,7 @@ async def echo(ctx,arg):
 async def r(ctx,arg):
     random.seed()
     vals=arg.split('d')
+    await ctx.send(vals)
     '''
     result=[]
     dsum=0
@@ -36,8 +37,8 @@ async def r(ctx,arg):
         dsum+=result[i]
     }
     '''
-    results=str(random.randint(1,vals[1]))
-    await ctx.send(results)
+    #results=str(random.randint(1,vals[1]))
+    #await ctx.send(results)
     
     
 bot.run(token)
