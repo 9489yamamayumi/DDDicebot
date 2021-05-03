@@ -28,7 +28,7 @@ async def echo(ctx,arg):
 async def r(ctx,arg):
     random.seed()
     vals=arg.split('d')
-    await ctx.send(f"arg : {vals[0]}, {vals[1]}")
+    await ctx.send(f"{arg} : {random.randint(1,7)}")
     '''
     result=[]
     dsum=0
