@@ -31,12 +31,11 @@ async def r(ctx,arg):
     results=[]
     rsltsum=0
     for i in range(times):{
+        '''
         roll=random.randint(1,sides)
-        '''
         results.append(roll)
-        '''
         rsltsum+=roll
-        
+        '''
     }
     await ctx.send(f"{arg} >> {rsltsum} : {results}")
 
