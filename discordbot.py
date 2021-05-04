@@ -36,7 +36,7 @@ async def r(ctx,arg):
 #        rsltsum+=results[i]
 #    }
 #    await ctx.send(f"{arg} >> {rsltsum} : {results}")
-     await ctx send(f"ok")
+     await ctx.send(f"ok")
 
 
 bot.run(token)
