@@ -25,18 +25,18 @@ async def echo(ctx,arg):
 
 @bot.command()
 async def r(ctx,arg):
-#    random.seed()
-#    vals=arg.split('d')
-#    times=int(vals[0])
-#    sides=int(vals[1])
-#    results=[]
-#    rsltsum=0
-#    for i in range(times):{
-#        results.append(random.randint(1,sides))
-#        rsltsum+=results[i]
-#    }
-#    await ctx.send(f"{arg} >> {rsltsum} : {results}")
-     await ctx.send(f"ok")
+    random.seed()
+    vals=arg.split('d')
+    times=int(vals[0])
+    sides=int(vals[1])
+    results=[]
+    rsltsum=0
+    for i in range(times):{
+        results.append(random.randint(1,sides))
+        rsltsum+=results[i]
+    }
+    await ctx.send(f"{arg} >> {rsltsum} : {results}")
+    await ctx.send(f"ok")
 
 
 bot.run(token)
