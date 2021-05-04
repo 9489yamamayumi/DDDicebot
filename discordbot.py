@@ -13,16 +13,6 @@ async def on_command_error(ctx, error):
     error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
     await ctx.send(error_msg)
 
-
-@bot.command()
-async def ping(ctx):
-    await ctx.send('pong')
-
-
-@bot.command()
-async def echo(ctx,arg):
-    await ctx.send(arg)
-
 @bot.command()
 async def r(ctx,arg):
     #prepare
@@ -32,12 +22,11 @@ async def r(ctx,arg):
     results=[]
     rsltsum=0
     #diceroll
-    for i in range(0,times):
+    for i in range(times):
         roll=random.randint(1,sides)
         results.append(roll)
         rsltsum+=roll
-        
+    #result
     await ctx.send(f"{arg} >> {rsltsum} : {results}")
-
-
+    
 bot.run(token)
