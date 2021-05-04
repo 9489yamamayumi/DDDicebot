@@ -1,3 +1,9 @@
+# DDDiceBot
+
+'.r XdY'でY面ダイスをX回振った結果とその合計値が返されます。
+
+以下作成に使用したもの
+
 # discordpy-startup
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
