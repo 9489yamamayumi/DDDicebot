@@ -25,17 +25,18 @@ async def echo(ctx,arg):
 
 @bot.command()
 async def r(ctx,arg):
+    #prepare
     vals=arg.split('d')
     times=int(vals[0])
     sides=int(vals[1])
     results=[]
     rsltsum=0
-    for i in range(0,5):
-        '''
+    #diceroll
+    for i in range(0,times):
         roll=random.randint(1,sides)
         results.append(roll)
-        '''
-        rsltsum = 1
+        rsltsum+=roll
+        
     await ctx.send(f"{arg} >> {rsltsum} : {results}")
 
 
