@@ -30,7 +30,7 @@ async def r(ctx,arg):
     sides=int(vals[1])
     results=[]
     rsltsum=0
-    for i in range(times):{
+    for i in range(0,times):{
         '''
         roll=random.randint(1,sides)
         results.append(roll)
