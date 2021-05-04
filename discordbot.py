@@ -3,7 +3,7 @@ import os
 import traceback
 import random
 
-bot = commands.Bot(command_prefix='/')
+bot = commands.Bot(command_prefix='.')
 token = os.environ['DISCORD_BOT_TOKEN']
 
 
@@ -23,7 +23,7 @@ async def ping(ctx):
 async def echo(ctx,arg):
     await ctx.send(arg)
 
-
+'''
 @bot.command()
 async def r(ctx,arg):
 #    random.seed()
@@ -38,5 +38,6 @@ async def r(ctx,arg):
 #    }
 #    await ctx.send(f"{arg} >> {rsltsum} : {results}")
      await ctx send(f"ok")
-    
+'''
+
 bot.run(token)
