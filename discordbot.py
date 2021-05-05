@@ -30,13 +30,11 @@ async def mc(ctx,arg):
 async def r(ctx,arg):
     #prepare
     vals=arg.split('d')
-    times=int(vals[0])
-    sides=int(vals[1])
     results=[]
     rsltsum=0
     #diceroll
-    for i in range(vals[0]):
-        roll=random.randint(1,sides)
+    for i in range(int(vals[0])):
+        roll=random.randint(1,int(vals[1]))
         results.append(roll)
         rsltsum+=roll
     #result
