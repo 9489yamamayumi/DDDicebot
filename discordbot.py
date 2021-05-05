@@ -35,7 +35,7 @@ async def r(ctx,arg):
     results=[]
     rsltsum=0
     #diceroll
-    for i in range(times):
+    for i in range(vals[0]):
         roll=random.randint(1,sides)
         results.append(roll)
         rsltsum+=roll
