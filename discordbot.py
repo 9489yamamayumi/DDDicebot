@@ -17,10 +17,9 @@ TRPGmode = "None"
 TRPGtype = ["CoC","Paranoia","Others"]
 
 #get author's name
-@bot.command()
-async def gn(ctx,arg):
-    username = arg.author
-    await ctx.send(f"{username}さん、どーも。")
+@client.event
+async def on_message(message):
+    print (message.author.id)
 
 #change TRPG mode
 @bot.command()
