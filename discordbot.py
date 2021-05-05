@@ -39,7 +39,7 @@ async def r(ctx,arg):
         results.append(roll)
         rsltsum+=roll
     #result
-    if(arg=="1d100" and TRPGtype=="CoC"):
+    if(arg=="1d100" and TRPGmode=="CoC"):
         if(rsltsum<6):exstts = "<critical!>"
         if(rsltsum>95):exstts = "<fumble!>"
     await ctx.send(f"roll {arg} -> {rsltsum} : {results} {exstts}")
