@@ -32,8 +32,8 @@ async def r(ctx,arg):
     results=[]
     rsltsum=0
     exstts=""
-    cfflg=false
-    if(arg=="1d100" and TRPGmode=="CoC"):cfflg=true
+    cfflg=0
+    if(arg=="1d100" and TRPGmode=="CoC"):cfflg=1
     vals=arg.split('d')
     #diceroll
     for i in range(int(vals[0])):
@@ -41,7 +41,7 @@ async def r(ctx,arg):
         results.append(roll)
         rsltsum+=roll
     #result
-    if(cfflg):
+    if(cfflg==1):
         if(rsltsum<6):exstts = "<critical!>"
         if(rsltsum>95):exstts = "<fumble!>"
     await ctx.send(f"roll {arg} -> {rsltsum} : {results} {exstts}")
