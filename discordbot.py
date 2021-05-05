@@ -16,11 +16,6 @@ async def on_command_error(ctx, error):
 TRPGmode = "None"
 TRPGtype = ["CoC","Paranoia","Others"]
 
-#get author's name
-@client.event
-async def on_message(message):
-    print (message.author.id)
-
 #change TRPG mode
 @bot.command()
 async def mc(ctx,arg):
