@@ -16,9 +16,12 @@ async def on_command_error(ctx, error):
 TRPGmode = "None"
 TRPGtype = ["CoC","Paranoia","Others"]
 
-@client.event
-async def getid(message):
-    print (message.author.id)
+#get author's name
+@bot.command()
+async def gn(ctx):
+    user = await bot.get_user_info(userid)
+    username = user.name
+    await ctx.send(f"{username}さん、どーも。")
 
 #change TRPG mode
 @bot.command()
