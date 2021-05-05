@@ -32,15 +32,17 @@ async def r(ctx,arg):
     vals=arg.split('d')
     results=[]
     rsltsum=0
+    exstts=""
     #diceroll
     for i in range(int(vals[0])):
         roll=random.randint(1,int(vals[1]))
         results.append(roll)
         rsltsum+=roll
     #result
-    await ctx.send(f"roll {arg} -> {rsltsum} : {results}")
     if(arg=="1d100" and TRPGtype=="CoC"):
-        if(rsltsum<6):await ctx.send("critical!")
-        if(rsltsum>95):await ctx.send("fumble!")
+        if(rsltsum<6):exstts = "<critical!>"
+        if(rsltsum>95):exstts = "<fumble!>"
+    await ctx.send(f"roll {arg} -> {rsltsum} : {results} {exstts}")
+    
     
 bot.run(token)
