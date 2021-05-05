@@ -3,7 +3,7 @@ import os
 import traceback
 import random
 
-bot = commands.Bot(command_prefix='.')
+bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
 
 
@@ -12,7 +12,23 @@ async def on_command_error(ctx, error):
     orig_error = getattr(error, "original", error)
     error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
     await ctx.send(error_msg)
+    
+TRPGmode = "None"
+TRPGtype = ["CoC","Paranoia","Others"]
 
+
+#change TRPG mode
+@bot.command()
+async def mc(ctx,arg):
+    if(arg in TRPGtype):
+        TRPGmode = arg
+        await ctx.send(f'''<<now changed TRPGmode to {arg}>>
+        <<モードを {arg} に変更しました>>''')
+    else:
+        await ctx.send(f'''<<this mode isn't supported>>
+        <<そのモードは存在しません>>''')
+
+#AdB to roll B-sides dices A times
 @bot.command()
 async def r(ctx,arg):
     #prepare
@@ -27,6 +43,6 @@ async def r(ctx,arg):
         results.append(roll)
         rsltsum+=roll
     #result
-    await ctx.send(f"{arg} >> {rsltsum} : {results}")
+    await ctx.send(f"<< {arg} > {rsltsum} : {results} >>")
     
 bot.run(token)
