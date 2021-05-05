@@ -22,11 +22,9 @@ TRPGtype = ["CoC","Paranoia","Others"]
 async def mc(ctx,arg):
     if(arg in TRPGtype):
         TRPGmode = arg
-        await ctx.send(f'''<<now changed TRPGmode to {arg}>>
-        <<モードを {arg} に変更しました>>''')
+        await ctx.send(f"now changed TRPGmode to {arg}\r\nモードを {arg} に変更しました")
     else:
-        await ctx.send(f'''<<this mode isn't supported>>
-        <<そのモードは存在しません>>''')
+        await ctx.send(f"this mode isn't supported\r\nそのモードは存在しません")
 
 #AdB to roll B-sides dices A times
 @bot.command()
@@ -43,6 +41,6 @@ async def r(ctx,arg):
         results.append(roll)
         rsltsum+=roll
     #result
-    await ctx.send(f"<< {arg} > {rsltsum} : {results} >>")
+    await ctx.send(f"roll {arg} -> {rsltsum} : {results}")
     
 bot.run(token)
