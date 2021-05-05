@@ -29,17 +29,19 @@ async def mc(ctx,arg):
 @bot.command()
 async def r(ctx,arg):
     #prepare
-    vals=arg.split('d')
     results=[]
     rsltsum=0
     exstts=""
+    cfflg=false
+    if(arg=="1d100" and TRPGmode=="CoC"):cfflg=true
+    vals=arg.split('d')
     #diceroll
     for i in range(int(vals[0])):
         roll=random.randint(1,int(vals[1]))
         results.append(roll)
         rsltsum+=roll
     #result
-    if(arg=="1d100" and TRPGmode=="CoC"):
+    if(cfflg):
         if(rsltsum<6):exstts = "<critical!>"
         if(rsltsum>95):exstts = "<fumble!>"
     await ctx.send(f"roll {arg} -> {rsltsum} : {results} {exstts}")
