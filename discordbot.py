@@ -39,5 +39,8 @@ async def r(ctx,arg):
         rsltsum+=roll
     #result
     await ctx.send(f"roll {arg} -> {rsltsum} : {results}")
+    if(arg=="1d100" and TRPGtype=="CoC"):
+        if(rsltsum<6):await ctx.send("critical!")
+        if(rsltsum>95):await ctx.send("fumble!")
     
 bot.run(token)
