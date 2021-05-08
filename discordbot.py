@@ -20,7 +20,7 @@ TRPGtype = ["CoC","Paranoia","Others"]
 async def on_message(message):
     if message.author.bot:
         return
-    elif message.content!="Hi!":
+    elif message.content == "Hi!":
         await message.channel.send(f"{message.name} yay!")
 
 #change TRPG mode
