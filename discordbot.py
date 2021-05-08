@@ -44,6 +44,7 @@ async def r(ctx,arg):
     if(cfflg==1):
         if(rsltsum<6):exstts = "<critical!>"
         if(rsltsum>95):exstts = "<fumble!>"
+    await ctx.send(f".{arg}.{rsltsum}.{exstts}.")
     await ctx.send(f"roll {arg} -> {rsltsum} : {results} {exstts}")
     
     
