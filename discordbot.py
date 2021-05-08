@@ -16,6 +16,13 @@ async def on_command_error(ctx, error):
 TRPGmode = "None"
 TRPGtype = ["CoC","Paranoia","Others"]
 
+@bot.event
+async def on_message(message):
+    if message.author.bot:
+        return
+    else:
+        await message.channel.send(f"{message} yay!")
+
 #change TRPG mode
 @bot.command()
 async def mc(ctx,arg):
