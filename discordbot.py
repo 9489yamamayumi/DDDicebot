@@ -24,6 +24,10 @@ async def mc(ctx,arg):
         await ctx.send(f"now changed TRPGmode to {arg}\r\nモードを {arg} に変更しました")
     else:
         await ctx.send(f"this mode isn't supported\r\nそのモードは存在しません")
+        
+@bot.command()
+async def m(ctx):
+    await ctx.send(f"now TRPGmode is {TRPGmode}\r\n現在のTRPGモードは{TRPGmode}です")
 
 #AdB to roll B-sides dices A times
 @bot.command()
