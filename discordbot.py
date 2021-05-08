@@ -21,7 +21,7 @@ TRPGtype = ["CoC","Paranoia","Others"]
 async def mc(ctx,arg):
     if(arg in TRPGtype):
         TRPGmode = arg
-        await ctx.send(f"now changed TRPGmode to {arg}\r\nモードを {arg} に変更しました")
+        await ctx.send(f"now changed TRPGmode to {TRPGmode}\r\nモードを {TRPGmode} に変更しました")
     else:
         await ctx.send(f"this mode isn't supported\r\nそのモードは存在しません")
         
